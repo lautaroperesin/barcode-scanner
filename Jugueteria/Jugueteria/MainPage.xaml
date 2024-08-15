@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Jugueteria.MainPage">
+    
+    <StackLayout>
+
+        <Label Text="ESCANEE EL CODIGO DE BARRAS DE SU PRODUCTO"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Padding="0,60,0,30"
+                   FontAttributes="Bold"
+                   FontSize="41"
+                   TextColor="Black"/>
+
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
+            <Entry x:Name="EntradaEscaner"
+                     Placeholder="Escanee su producto"
+                     HorizontalTextAlignment="Center"
+                     FontSize="20"
+                     VerticalOptions="CenterAndExpand"
+                     Completed="EntradaEscaner_Completed"
+                     TextChanged="EntradaEscaner_TextChanged"
+                     HorizontalOptions="CenterAndExpand"
+                     Margin="10"/>
+        </StackLayout>
+
+
+        <StackLayout x:Name="ImagenLogo" IsVisible="True">
+            <Image Source="Resources/drawable/logo_casa_gonnet.png" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="400"/>
+        </StackLayout>
+            <!-- Etiqueta para la descripcion del producto -->
+        <StackLayout x:Name="InfoProducto" IsVisible="False">
+            <Label Text="Producto:" 
+                    FontSize="45"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Margin="0,10,0,0"/>
+        
+            <Label x:Name="NombreProducto"
+                    Text="" 
+                    FontSize="40"
+                    TextColor="Black"
+                    HorizontalOptions="Center"/>
+
+        <!-- Etiqueta para el precio del producto -->
+            <Label Text="Precio:" 
+                    FontSize="45" 
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Margin="0,10,0,0"/>
+        
+            <Label x:Name="PrecioProducto"
+                    Text="" 
+                    FontSize="40"
+                    TextColor="Black"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
